@@ -6,11 +6,17 @@ A Dockerfile is provided to make ease to implement the bot message sender using 
 
 Just clone the repo and next:
 
-docker build -t tg_bot .
+1. Create a .env file in the directory root with the example data given in .env.sample file.
 
-Next you can create a docker container:
+2. Build the docker image with: docker build -t tg_bot .
+
+3. Next you can create a docker container:
 
 docker run --name my-tg-bot -it -dp 8000:8000 tg_bot
+
+You can test if is working making a curl request for example:
+
+curl -H "Accept: application/json" -X POST http://x.x.x.x:8000/send-msg -d '{"chat_id": "1000000", "content": "Say hello to my little friend. PD: Tony Montana."}'
 
 Enjoy!
 
