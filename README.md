@@ -14,9 +14,8 @@ Just clone the repo and next:
 
 docker run --name my-tg-bot -it -dp 8000:8000 tg_bot
 
-You can test if is working making a curl request for example:
+You can test if is working making a cURL request for example:
 
-curl -H "Accept: application/json" -X POST http://x.x.x.x:8000/send-msg -d '{"chat_id": "1000000", "content": "Say hello to my little friend. PD: Tony Montana."}'
+curl -X POST -H "Content-Type: application/json" -H "Accept: application/json" -d '{"chat_id": "123123123", "content": "Say hello to my little friend. Atte: Tony Montana."}' http://x.x.x.x:8000/send-msg/send-msg
 
 Enjoy!
-
